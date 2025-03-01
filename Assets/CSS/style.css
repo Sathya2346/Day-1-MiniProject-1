@@ -1,0 +1,156 @@
+.overall{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 99;
+}
+.child>.Image{
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+.Image img{
+    width: 100%;
+    height: 100%;
+}
+.child{
+    border: 1px solid gray;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+    overflow: hidden;
+}
+.Image>img:hover{
+    transition: 0.2s linear;
+    transform: scale(1.2);
+}
+
+
+/* Cart Item*/
+.carts{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px gray;
+    z-index: 100;
+}
+/* Its work on js*/
+.cart-active{
+    right:0;
+    transition: 0.5s;
+}
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 20px;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+.cart-img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.price-box{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-food-title{
+    font-size: 1rem;
+    color: orange;
+    font-weight: 500;
+}
+.cart-price{
+    font-weight: 600;
+}
+.cart-quantity{
+    outline: none;
+    border: 1px solid gray;
+    width: 2.4rem;
+    text-align: center;
+}
+.cart-remove{
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Total */
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 0.5rem;
+}
+.btn-buy{
+    padding: 10px 16px;
+    background-color: gray;
+    color: white;
+    border:none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+#cart-close{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+}
+
+@media screen and (max-width:320px) {
+    .carts{
+        position: fixed;
+        top: 0;
+        right: -130%;
+        width: 400px;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 2px 2px 2px 2px gray;
+        z-index: 100;
+    }
+}
